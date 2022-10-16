@@ -9,7 +9,7 @@
   <body>
     <main>
         <header>
-            <nav>
+            <nav class="navigation-style">
                 <a href="#">Objective</a>
                 <a href="#">Videos</a>
                 <a href="#">Links</a>
@@ -17,13 +17,11 @@
                 <a href="#">Previous Meetings</a>
             </nav>
         </header>
-        <section>
-            <div>
-                <h1>CSE110 Team 3 Web Development Planning</h1>
-                <h2><em>Meeting Notes</em></h2>
-                <h3><i>October 9, 2022</i></h3>
-            </div>
-        </section>
+        <div id="top-header">
+            <h1 id="title">CSE110 Team 3 Web Development Planning</h1>
+            <h2><em>Meeting Notes</em></h2>
+            <h3><i>October 9, 2022</i></h3>
+        </div>
         <hr>
         <section>
             <div>
@@ -82,7 +80,7 @@
                 <span></span>
                 <h1>Important Media</h1>
                 <h4>Our Architecture</h4>
-                <img src="media/architecture.png" alt="No Text">
+                <img src="media/architecture.png" alt="No Text" class="image-size-fix">
                 <h4>Audio and Video of Meeting</h4>
                 <p><strong>Video</strong></p>
                 <video width="450" height="240" controls>
@@ -110,10 +108,10 @@
         <section>
             <h1>Interest Form</h1>
             <form action="#">
-                <fieldset>
-                    <label for="firstName">First Name:</label>
-                    <input type="text" name="#" id="firstName">
-                    <p></p>
+                <label for="firstName">First Name:</label>
+                <input type="text" name="#" id="firstName">
+                <p></p>
+                <fieldset class="flex-field">
                     <label for="python">Do you know python?</label>
                     <input type="checkbox" id="python">
                     <p></p>
@@ -125,10 +123,10 @@
                     <p></p>
                     <label for="Rust">Do you know Rust?</label>
                     <input type="checkbox" id="Rust">
-                    <p></p>
-                    <label for="birthday">Enter your birthday!</label>
-                    <input type="date" name="#" id="birthday">
                 </fieldset>
+                <p></p>
+                <label for="birthday">Enter your birthday!</label>
+                <input type="date" name="#" id="birthday">
                 <fieldset>
                     <legend>Select your year...</legend>
                     <label for="one">First Year</label>
@@ -167,7 +165,7 @@
                     <option value="Design">Design</option>
                     </select>
                 </fieldset>
-                <button>Submit</button>
+                <button id="submit-button">Submit</button>
             </form>
         </section>
         <footer>
