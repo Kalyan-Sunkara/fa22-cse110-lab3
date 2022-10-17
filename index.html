@@ -76,20 +76,24 @@
         </section>
         <hr>
         <section>
-            <div>
                 <span></span>
                 <h1>Important Media</h1>
+                <div class="grid-media">
                 <h4>Our Architecture</h4>
-                <img src="media/architecture.png" alt="No Text" class="image-size-fix">
-                <h4>Audio and Video of Meeting</h4>
-                <p><strong>Video</strong></p>
-                <video width="450" height="240" controls>
-                    <source src="media/meeting.mp4" type="video/mp4">
-                </video>
-                <p><b>Audio</b></p>
-                <audio controls>
-                    <source src="media/audio.mp3" type="audio/mpeg">
-                </audio>
+                <img src="media/architecture.png" alt="No Text" class="image-size-fix" id="grid-item-1">
+                <!-- <h4>Audio and Video of Meeting</h4> -->
+                <div id="grid-item-2">
+                    <p><strong>Video</strong></p>
+                    <video width="450" height="240" controls>
+                        <source src="media/meeting.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div id="grid-item-3">
+                    <p><b>Audio</b></p>
+                    <audio controls>
+                        <source src="media/audio.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
             </div>
         </section>
         <hr>
@@ -98,7 +102,7 @@
                 <h1>Specific Info</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ipsum expedita, eligendi amet quo, necessitatibus incidunt enim similique eius quis culpa unde itaque veritatis eveniet quasi aliquid omnis illo. Aspernatur.</p><br>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non, perferendis. Asperiores unde corrupti magnam pariatur! Eveniet voluptas aperiam aliquam recusandae mollitia, repudiandae sequi ex. Architecto minus et provident dolor laudantium?</p>
-                <details>
+                <details class="details-style">
                     <summary>Specifc Target Goals</summary>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum dicta nulla at odit expedita? Placeat ab doloribus nostrum nulla, deserunt id natus suscipit! Nam ut maxime, deleniti pariatur libero quo?</p>
                 </details>
@@ -108,8 +112,10 @@
         <section>
             <h1>Interest Form</h1>
             <form action="#">
-                <label for="firstName">First Name:</label>
-                <input type="text" name="#" id="firstName">
+                <div class="name-position">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" name="#" id="firstName">
+                </div>
                 <p></p>
                 <fieldset class="flex-field">
                     <label for="python">Do you know python?</label>
