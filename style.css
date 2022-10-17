@@ -1,56 +1,104 @@
+/* include our downloaded font so that we can use it in our css styleesheet */
 @font-face {
     font-family: personalFont;
     src: url(fonts/FuzzyBubbles-Regular.ttf);
 }
 
+/* A universal way of applying our special font to all text on the page */
 *{
     font-family: personalFont;
 }
 
+/* Define the generic background color and close up any space at the top */
 body{
     background-color: #F2bc94;
+    margin: 0;
 }
+
+/* bolden our headers and paragraphs */
+h1,p{
+    font-weight: 900;
+}
+
+/* generic brown color for all our paragraph elements */
 p{
     color: hsla(4, 56%, 29%,90%);
     display: block;
+    font-size: 1.5ex;
 }
+
+/* allow the navigation bar to come down with us when we scroll to the bottom */
 header{
     position: sticky;
     top: 0;
 }
+
+/* navigation styling */
 .navigation-style{
     background-color: black;
     width: 100%;
-    height: 50px;
+    height: 100px;
+    padding-left: 20%;
+    margin-right: 10px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
-nav.navigation-style > a {
+nav > a {
     text-decoration: none;
     display: inline;
+    align-items: center;
     position: sticky;
+    margin: auto;
 }
+
+/* specific styling for links */
+a[href*="#"] {
+    font-size: 2em;
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 12px;
+    border-color: #722620;
+    background-color: white;
+  }
 
 a:hover{
     color: red;
+    background-color: black;
+    border: solid black;
 }
+
+a:visited{
+    color: #722620;
+}
+
+h1 ~ p{
+    padding: 0 10% 0 10%;
+}
+
+/* set section height for uniform look */
 section {
     min-height: 35vh;
   }
 
+/* style form submit button */
 #submit-button{
-    height: 50px;
-    width: 200px;
+    height: 1in;
+    width: 3cm;
     position: relative;
-    left: 50%;
+    margin-left: 50%;
 }
 #submit-button:active{
     background-color: rgb(24, 182, 24);
 }
 
+/* allign text at top to be center of page */
 #top-header{
     text-align: center;
 }
 
+/* employ a flex box for part of our form */
 .flex-field{
     max-width: 700px;
     min-width: 1em;
@@ -58,19 +106,63 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    margin: 0 20% 0 20%;
 }
 
+/* ensure our image size is not too big for the page */
 .image-size-fix{
     max-width: 500px;
     min-width: 100px;
     height: 300px;
 }
 
+/* color our section titles a uniform color */
 section h1{
     color: #722620;
+    text-align: center;
 }
+
+/* color change when screen is too small */
 @media (max-width: 500px) {
     body{
         background-color: white;
     }
   }
+
+.name-position{
+    margin: 0 0 0 40%;
+}
+
+details.details-style{
+    border: solid #722620;
+}
+
+/* grid styling and positions */
+.grid-media{
+    display: grid;
+}
+
+#grid-item-1{
+    border: solid black 10px;
+    grid-column-start: 1;
+  grid-column-end: three;
+}
+
+#grid-item-2{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-area: sidebar;
+}
+
+#grid-item-3{
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+/* font adjustments for sub headers */
+h1 + h2{
+    font-size: 2rem;
+}
+h2 + h3{
+    font-size: 1rem;
+}
