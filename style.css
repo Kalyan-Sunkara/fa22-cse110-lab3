@@ -1,5 +1,12 @@
-*{
+@font-face {
+    font-family: personalFont;
+    src: url(fonts/FuzzyBubbles-Regular.ttf);
 }
+
+*{
+    font-family: personalFont;
+}
+
 body{
     background-color: #F2bc94;
 }
